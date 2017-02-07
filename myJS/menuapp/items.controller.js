@@ -14,7 +14,7 @@
       $ctrl.list = responseData.menu_items;
     }
     else
-      $ctrl.short_name = responseData.short_name;
+      $ctrl.shortName = responseData.short_name;
   };
 
 })()

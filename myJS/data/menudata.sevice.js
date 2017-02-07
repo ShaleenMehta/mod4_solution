@@ -14,9 +14,7 @@
       .then(function (response){return response.data;});
     };
     svc.getItemsForCategory = function (categoryShortName) {
-      var output = function(error) {
-        return categoryShortName;
-      } ;
+      var output = '';
       if(categoryShortName != '')
       {
         output = $http({

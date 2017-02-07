@@ -14,7 +14,7 @@
       })
       .state ('categories', {
         url: '/categories',
-        templateUrl: 'myHTML/menu-categories.html',
+        template: '<menu-category list="$ctrl.list" />',
         controller: 'CategoriesController as $ctrl',
         resolve:{
           responseData: ['MenuDataService', function(MenuDataService) {
@@ -25,7 +25,7 @@
       })
       .state ('categories.items', {
         url: '/{short_name}',
-        templateUrl: 'myHTML/category-items.html',
+        template: '<category-item list="$ctrl.list" category-name = "$ctrl.categoryName" short-name = "$ctrl.shortName" />',
         controller: 'ItemsController as $ctrl',
         resolve:{
           responseData: ['$stateParams', 'MenuDataService', function($stateParams, MenuDataService) {
