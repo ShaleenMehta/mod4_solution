@@ -1,0 +1,13 @@
+<table ng-if="$ctrl.list && $ctrl.list.length != 0">
+  <tr>
+    <td width="10%" nowrap valign = "top">
+      <h3>All Categories:</h3>
+      <ul>
+        <li ng-repeat = "category in $ctrl.list">
+          <a href = "{{category.short_name}}" ui-sref = "categories.items({short_name: category.short_name})" ui-sref-active = "activeTab">{{category.name}}</a>
+        </li>
+      </ul>
+    </td>
+    <td valign = "top" nowrap><ui-view /></td>
+  <tr>
+</table>

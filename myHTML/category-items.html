@@ -1,0 +1,18 @@
+<div ng-if="$ctrl.list && $ctrl.list.length != 0">
+  <h3>{{$ctrl.categoryName}}:</h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Large</th>
+      <th>Small</th>
+      <th>Description</th>
+    <tr>
+    <tr ng-repeat = "item in $ctrl.list">
+      <td noWrap>{{item.name}}</td>
+      <td noWrap>{{item.price_large|currency:"&#8360 ":2}} {{item.large_portion_name}}</td>
+      <td noWrap>{{item.small_large|currency:"&#8360 ":2}} {{item.small_portion_name}}</td>
+      <td>{{item.description}}</td>
+    <tr>
+  </table>
+</div>
+<div class="error" ng-if="$ctrl.list.length == 0">Nothing listed for <i>{{$ctrl.short_name}}</i></div>

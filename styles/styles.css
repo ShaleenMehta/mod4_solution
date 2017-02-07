@@ -1,0 +1,15 @@
+.error {
+  color: red;
+  font-weight: bold;
+}
+table {
+    border-spacing: 5px;
+    width:100%
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+}
