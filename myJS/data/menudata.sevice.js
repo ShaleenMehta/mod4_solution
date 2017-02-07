@@ -3,7 +3,7 @@
 
   angular.module('data')
     .service('MenuDataService',MenuDataService_fn)
-    .constant('baseUrl','http://davids-restaurant.herokuapp.com/')
+    .constant('baseUrl','https://davids-restaurant.herokuapp.com/')
     ;
 
   MenuDataService_fn.$inject = ['baseUrl', '$http','$q','$timeout'];
